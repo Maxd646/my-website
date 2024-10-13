@@ -1,0 +1,14 @@
+#wellcome {
+    color: aqua;
+    font-size: 40px;
+    margin: auto;
+    background-color: none;
+}
+.mytable{
+    color: green;
+    background-color: white;
+    font-size: medium;
+    font-style: unset;
+    margin-left: 20px;
+    margin-top: 120px;
+}

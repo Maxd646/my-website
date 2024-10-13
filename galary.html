@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Year Software Engineering Section B</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" id="wellcome">2nd Year SWE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="galary.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-bold">Section B Photo Gallery</h1>
+                <p class="lead text-body-secondary">እንኳን ወደ ሶፍትዌር ምህንድስና ሴክሽን B ድህረ ገጽ በሰላም መጡ!</p>
+            </div>
+        </div>
+    </section>
+    <br><br><br>
+
+    <!-- Photo Gallery Cards -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="photos/birthday.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Birthday Photograph</h5>
+                        <p class="card-text">The perfect birthday photography picture.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="photos/wedding.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Wedding Photograph</h5>
+                        <p class="card-text">The perfect wedding photography picture.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="photos/gratuation.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Graduation Photograph</h5>
+                        <p class="card-text">The perfect graduation photography picture.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><hr>
+
+    <!-- Class Schedule Table -->
+    <table class="table table-bordered" id="mytable">
+        <thead>
+            <tr>
+                <th>Class Days</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Course Name</th>
+                <th>Name of Instructor</th>
+                <th>Block Number</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Course Name</th>
+                <th>Name of Instructor</th>
+                <th>Block Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>2:00</td>
+                <td>4:30</td>
+                <td>Global Trend</td>
+                <td>Dr. Mnaye</td>
+                <td>B58.1-007</td>
+                <td>7:30</td>
+                <td>9:30</td>
+                <td>Discrete Mathematics</td>
+                <td>Dr. Getachew</td>
+                <td>B58.3-001</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>4:30</td>
+                <td>6:20</td>
+                <td>Introduction to SWE</td>
+                <td>Mr. Kassahun</td>
+                <td>B57.4-010</td>
+                <td>7:30</td>
+                <td>9:30</td>
+                <td>Introduction to SWE</td>
+                <td>Mr. Kassahun</td>
+                <td>Lab SW 3</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>2:30</td>
+                <td>4:20</td>
+                <td>Fundamental Programming 1</td>
+                <td>Dr. Amiyr</td>
+                <td>B61 SW Lab 3</td>
+                <td>4:30</td>
+                <td>6:20</td>
+                <td>Statistics and Probability</td>
+                <td>Dr. Melaku</td>
+                <td>B57.2-007</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>4:30</td>
+                <td>6:20</td>
+                <td>Fundamental Programming 1 and History</td>
+                <td>Dr. Amiyr & Dr. Asfaw</td>
+                <td>B58.5-003</td>
+                <td>7:30</td>
+                <td>9:30</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>2:00</td>
+                <td>6:20</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>7:30</td>
+                <td>12:20</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <!-- Bootstrap JavaScript (don't forget to add this for full functionality) -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
