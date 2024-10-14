@@ -3,79 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Second Year Software Engineering - Section B</title>
-    <link rel="stylesheet" href="newstyle.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Second Year Software Engineering Section B</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Ensure this file exists -->
+    <link rel="stylesheet" href="newstyle.css"> <!-- Ensure this file exists -->
 </head>
 <body>
-    <!-- Navigation Example with External Link -->
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">2nd Year SWE</a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.example.com" target="_blank">External Website</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
         </div>
     </nav>
 
-    <!-- Section Example with File Download and Email Link -->
-    <section class="py-5 text-center container">
-        <h2>Download Syllabus</h2>
-        <a href="files/syllabus.pdf" download class="btn btn-outline-primary">Download PDF</a>
+    <!-- Hero Section -->
+    <center>
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-bold">Welcome to Software Engineering Section B</h1>
+                    <p class="lead text-body-secondary">እንኳን ወደ ሶፍትዌር ምህንድስና ሴክሽን B ድህረ ገጽ በሰላም መጡ!</p>
+                    <p>
+                        <a href="gallery.html" class="btn btn-outline-success">Our Gallery</a>
+                        <a href="contact.html" class="btn btn-outline-success">Contact</a>
+                    </p>
+                </div>
+            </div>
+        </section>
 
-        <h3>Contact Us</h3>
-        <p>Email us at <a href="mailto:someone@example.com?subject=Course Inquiry">someone@example.com</a></p>
-    </section>
+        <!-- Class Information -->
+        <div class="list-group">
+            <div class="list-group-item">
+                <h5 class="mb-1">The Section B Tentative Schedule</h5>
+                <p>Class day, class time, instructor name</p>
+            </div>
+            <div class="list-group-item">
+                <h5 class="mb-1">The Section B Student Group List</h5>
+                <p>Group 1, Group 2, Group 3, Group 4, Group 5</p>
+            </div>
+            <div class="list-group-item">
+                <h5 class="mb-1">Representative of the Class Members</h5>
+                <p>Male representative, female representative</p>
+            </div>
+        </div>
 
-    <!-- Anchor Link Example to Jump to Table -->
-    <section class="jump-links text-center my-3">
-        <a href="#myTable" class="btn btn-outline-success">Jump to Class Schedule</a>
-    </section>
+        <br><br>
+        <button class="btn btn-danger">To get more information</button>
+        <button id="active" onclick="alert('Hello. If you have any questions or comments, please use the contact section. If you want to see when we have class, please check the gallery section.')">Click me</button>
+    </center>
 
-    <hr>
+    <br><br>
 
-    <!-- Table with ID for Anchoring -->
-    <div class="container">
-        <h2 id="myTable" class="text-center">Class Schedule</h2>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Class Days</th>
-                    <th>From</th>
-                    <th>To</th>
-                    <th>Course Name</th>
-                    <th>Name of Instructor</th>
-                    <th>Block Number</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Monday</td>
-                    <td>2:00 PM</td>
-                    <td>4:30 PM</td>
-                    <td>Global Trend</td>
-                    <td>Dr. Mnaye</td>
-                    <td>B58.1-007</td>
-                </tr>
-                <tr>
-                    <td>Tuesday</td>
-                    <td>4:30 PM</td>
-                    <td>6:20 PM</td>
-                    <td>Introduction to SWE</td>
-                    <td>Mr. Kassahun</td>
-                    <td>B57.4-010</td>
-                </tr>
-                <!-- More table rows as needed -->
-            </tbody>
-        </table>
-    </div>
-
-    <hr/>
-
-    <!-- Carousel Slider -->
+    <!-- Slider -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -114,57 +113,24 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-
-    <br/>
-
-    <!-- List Group and Buttons -->
-    <center>
-        <section class="py-5 text-center container">
-            <div class="row py-lg-5">
-                <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-bold">Welcome to Software Engineering Section B</h1>
-                    <p class="lead text-body-secondary">እንኳን ወደ ሶፍትዌር ምህንድስና ሴክሽን B ድህረ ገጽ በሰላም መጡ!</p>
-                    <p>
-                        <a href="gallery.html" class="btn btn-outline-success">Our Gallery</a>
-                        <a href="contact.html" class="btn btn-outline-success">Contact</a>
-                    </p>
-                </div>
-            </div>
-        </section>
-        
-        <ol class="list-group list-group-numbered">
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto">
-                <div class="fw-bold">Section B Tentative Schedule</div>
-                Class day, time, and instructor names.
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto">
-                <div class="fw-bold">Student Group List</div>
-                Group 1, 2, 3, 4, and 5.
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto">
-                <div class="fw-bold">Class Representatives</div>
-                Male and female representatives.
-              </div>
-            </li>
-        </ol>
-    </center>
-
-    <br><br>
-
-    <!-- Alert Button -->
-    <center>
-        <button class="btn btn-danger">Get More Information</button>
-        <button id="active" onclick="alert('Do you have any questions or comments? Please use the contact section. If you want to see the schedule, check the gallery section.')">Click Me</button>
-    </center>
-
-    <br><br><br>
+    <!-- /Slider -->
 
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Section Example with File Download and Email Link -->
+    <section class="py-5 text-center container">
+        <h2>Download Syllabus</h2>
+        <a href="files/syllabus.pdf" download class="btn btn-outline-primary">Download PDF</a>
+        <h3>Contact Us</h3>
+        <p>Email us at <a href="mailto:someone@example.com?subject=Course Inquiry">someone@example.com</a></p>
+    </section>
+
+    <!-- Anchor Link Example to Jump to Class Schedule -->
+    <section class="jump-links">
+        <a href="#myTable" class="btn btn-outline-success">Jump to Class Schedule</a>
+    </section>
+
+    <hr>
 </body>
 </html>
