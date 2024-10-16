@@ -1,23 +1,8 @@
-a {
-    color: white;
-    text-align: center;
-    background-color: black;
-    display: inline-block;
-    padding: 12px 25px;
-    text-decoration: none;
-}
-a:hover {
-    background-color: #ff0000;
-}
-#active {
-    background-color: green;
-    color: blue;
-}
 
 body {
     background-image: url('background.jfif'); /* Replace 'background.jpg' with your actual image file */
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-attachment: fixed; /* Ensures the background image stays in place */
     background-repeat: no-repeat;
 }
