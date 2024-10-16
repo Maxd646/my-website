@@ -136,7 +136,36 @@
         <button id="active" onclick="alert('Hello. Do you have any questions or comments? Please use the contact section.')">Click Me</button>
     </center>
     <br><br><br>
-
+        <!-- Upload Information Form -->
+<section class="container mt-5">
+    <h2 class="text-center">Upload Information</h2>
+    <form id="uploadForm" method="POST" action="upload.php">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" name="title" required>
+        </div>
+        <div class="mb-3">
+            <label for="content" class="form-label">Content</label>
+            <textarea class="form-control" id="content" name="content" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</section>
+        <!-- Display Uploaded Information -->
+<section class="container mt-5">
+    <h2 class="text-center">Uploaded Information</h2>
+    <div id="uploadedInfo">
+        <?php
+        // Read from the uploads.txt file and display its content
+        if (file_exists('uploads.txt')) {
+            $content = file_get_contents('uploads.txt');
+            echo nl2br($content); // Convert new lines to <br> for HTML display
+        } else {
+            echo "<p>No information uploaded yet.</p>";
+        }
+        ?>
+    </div>
+</section>
     <!-- Navigation Example with External Link -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
