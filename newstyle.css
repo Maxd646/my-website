@@ -15,7 +15,7 @@ a:hover {
 }
 
 body {
-    background-image: url('background.jpg'); /* Replace 'background.jpg' with your actual image file */
+    background-image: url('background.jfif'); /* Replace 'background.jpg' with your actual image file */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Ensures the background image stays in place */
