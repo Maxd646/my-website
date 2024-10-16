@@ -10,6 +10,24 @@
     <link rel="stylesheet" href="newstyle.css">
 </head>
 <body>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Assuming we can detect login status via a session or local storage
+    const loggedIn = sessionStorage.getItem('loggedIn') || false;
+
+    if (!loggedIn) {
+        // Disable gallery and contact links
+        document.querySelector('a[href="galary.html"]').onclick = function(e) {
+            e.preventDefault();
+            alert('Please log in or create an account to view the gallery.');
+        };
+        document.querySelector('a[href="contact.html"]').onclick = function(e) {
+            e.preventDefault();
+            alert('Please log in or create an account to contact us.');
+        };
+    }
+});
+</script>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#" id="welcome">Daniboy Entertainment</a>
