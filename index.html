@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="newstyle.css"> <!-- Your custom CSS -->
     <link rel="stylesheet" href="style.css"> <!-- Additional styling -->
     <link rel="stylesheet" href="bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="newstyle.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -136,7 +137,7 @@
         <button id="active" onclick="alert('Hello. Do you have any questions or comments? Please use the contact section.')">Click Me</button>
     </center>
     <br><br><br>
-        <!-- Upload Information Form -->
+<!-- Upload Information Form -->
 <section class="container mt-5">
     <h2 class="text-center">Upload Information</h2>
     <form id="uploadForm" method="POST" action="upload.php">
@@ -151,6 +152,14 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </section>
+    <script>
+    document.getElementById('uploadForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent form from reloading the page
+
+        let uploadedText = document.getElementById('textUpload').value;
+        document.getElementById('displayText').innerText = uploadedText;
+    });
+</script>
         <!-- Display Uploaded Information -->
 <section class="container mt-5">
     <h2 class="text-center">Uploaded Information</h2>
