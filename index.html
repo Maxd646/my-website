@@ -28,6 +28,46 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+<!-- Login Form -->
+<div id="login-section">
+  <h2>Login</h2>
+  <form id="loginForm" method="POST" action="login.php">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+    <button type="submit">Login</button>
+  </form>
+  <p>Don't have an account? <a href="#" onclick="toggleSignup()">Create one</a></p>
+</div>
+
+<!-- Signup Form -->
+<div id="signup-section" style="display:none;">
+  <h2>Signup</h2>
+  <form id="signupForm" method="POST" action="signup.php">
+    <label for="newUsername">Username:</label>
+    <input type="text" id="newUsername" name="username" required>
+    <br>
+    <label for="newPassword">Password:</label>
+    <input type="password" id="newPassword" name="password" required>
+    <br>
+    <button type="submit">Sign Up</button>
+  </form>
+  <p>Already have an account? <a href="#" onclick="toggleLogin()">Login</a></p>
+</div>
+    <script>
+function toggleSignup() {
+    document.getElementById('login-section').style.display = 'none';
+    document.getElementById('signup-section').style.display = 'block';
+}
+
+function toggleLogin() {
+    document.getElementById('signup-section').style.display = 'none';
+    document.getElementById('login-section').style.display = 'block';
+}
+</script>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#" id="welcome">Daniboy Entertainment</a>
