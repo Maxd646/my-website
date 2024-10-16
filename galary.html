@@ -181,5 +181,16 @@ if (!isset($_SESSION['logged_in'])) {
 
     <!-- Bootstrap JavaScript (don't forget to add this for full functionality) -->
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+function toggleSignup() {
+    document.getElementById('login-section').style.display = 'none';
+    document.getElementById('signup-section').style.display = 'block';
+}
+
+function toggleLogin() {
+    document.getElementById('signup-section').style.display = 'none';
+    document.getElementById('login-section').style.display = 'block';
+}
+</script>
 </body>
 </html>
