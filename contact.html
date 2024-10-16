@@ -7,6 +7,14 @@
      <link rel="stylesheet" href="newstyle.css">
 </head>
 <body>
+    <?php
+session_start();
+if (!isset($_SESSION['logged_in'])) {
+    header("Location: index.html");  // Redirect to login if not authenticated
+    exit();
+}
+?>
+
 <hr>
 <h1> contact us</h1>
 <h3>phone number:  +2150712394424</h3>
