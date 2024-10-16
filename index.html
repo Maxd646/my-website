@@ -10,64 +10,6 @@
     <link rel="stylesheet" href="newstyle.css">
 </head>
 <body>
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Assuming we can detect login status via a session or local storage
-    const loggedIn = sessionStorage.getItem('loggedIn') || false;
-
-    if (!loggedIn) {
-        // Disable gallery and contact links
-        document.querySelector('a[href="galary.html"]').onclick = function(e) {
-            e.preventDefault();
-            alert('Please log in or create an account to view the gallery.');
-        };
-        document.querySelector('a[href="contact.html"]').onclick = function(e) {
-            e.preventDefault();
-            alert('Please log in or create an account to contact us.');
-        };
-    }
-});
-</script>
-<!-- Login Form -->
-<div id="login-section">
-  <h2>Login</h2>
-  <form id="loginForm" method="POST" action="login.php">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
-    <br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
-    <br>
-    <button type="submit">Login</button>
-  </form>
-  <p>Don't have an account? <a href="#" onclick="toggleSignup()">Create one</a></p>
-</div>
-
-<!-- Signup Form -->
-<div id="signup-section" style="display:none;">
-  <h2>Signup</h2>
-  <form id="signupForm" method="POST" action="signup.php">
-    <label for="newUsername">Username:</label>
-    <input type="text" id="newUsername" name="username" required>
-    <br>
-    <label for="newPassword">Password:</label>
-    <input type="password" id="newPassword" name="password" required>
-    <br>
-    <button type="submit">Sign Up</button>
-  </form>
-  <p>Already have an account? <a href="#" onclick="toggleLogin()">Login</a></p>
-</div>
-    <script>
-function toggleSignup() {
-    document.getElementById('login-section').style.display = 'none';
-    document.getElementById('signup-section').style.display = 'block';
-}
-
-function toggleLogin() {
-    document.getElementById('signup-section').style.display = 'none';
-    document.getElementById('login-section').style.display = 'block';
-}
-</script>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#" id="welcome">Daniboy Entertainment</a>
@@ -147,7 +89,63 @@ function toggleLogin() {
             </div>
         </div>
     </section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Assuming we can detect login status via a session or local storage
+    const loggedIn = sessionStorage.getItem('loggedIn') || false;
 
+    if (!loggedIn) {
+        // Disable gallery and contact links
+        document.querySelector('a[href="galary.html"]').onclick = function(e) {
+            e.preventDefault();
+            alert('Please log in or create an account to view the gallery.');
+        };
+        document.querySelector('a[href="contact.html"]').onclick = function(e) {
+            e.preventDefault();
+            alert('Please log in or create an account to contact us.');
+        };
+    }
+});
+</script>
+<!-- Login Form -->
+<div id="login-section">
+  <h2>Login</h2>
+  <form id="loginForm" method="POST" action="login.php">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br>
+    <button type="submit">Login</button>
+  </form>
+  <p>Don't have an account? <a href="#" onclick="toggleSignup()">Create one</a></p>
+</div>
+<!-- Signup Form -->
+<div id="signup-section" style="display:none;">
+  <h2>Signup</h2>
+  <form id="signupForm" method="POST" action="signup.php">
+    <label for="newUsername">Username:</label>
+    <input type="text" id="newUsername" name="username" required>
+    <br>
+    <label for="newPassword">Password:</label>
+    <input type="password" id="newPassword" name="password" required>
+    <br>
+    <button type="submit">Sign Up</button>
+  </form>
+  <p>Already have an account? <a href="#" onclick="toggleLogin()">Login</a></p>
+</div>
+    <script>
+function toggleSignup() {
+    document.getElementById('login-section').style.display = 'none';
+    document.getElementById('signup-section').style.display = 'block';
+}
+
+function toggleLogin() {
+    document.getElementById('signup-section').style.display = 'none';
+    document.getElementById('login-section').style.display = 'block';
+}
+</script>
 <!-- Accordion Section -->
 <div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
