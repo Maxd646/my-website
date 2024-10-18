@@ -7,17 +7,31 @@
     <link rel="stylesheet" href="newstyle.css"> <!-- Your custom CSS -->
     <link rel="stylesheet" href="style.css"> <!-- Additional styling -->
     <link rel="stylesheet" href="bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <style>
+        .media-container {
+            display: flex;
+            flex-direction: row; /* Ensures horizontal alignment */
+            align-items: center; /* Vertically aligns items */
+            gap: 20px; /* Adds space between the items */
+        }
+
+        .media-container > * {
+            margin: 10px; /* Adds a small margin to each item */
+        }
+    </style>
 </head>
 <body>
-     <br> 
+<div class="media-container">
+    <!-- Video Embed -->
     <embed type="video/webm" src="flower.mp4" width="250" height="200"/>
-    <hr size="4" color="green" noshade>
-    <br>
+
+    <!-- Audio with download link -->
     <figure>
-  <figcaption>Listen to the T-Rex:</figcaption>
-  <audio controls src="Askenagn-Abeba Desalegn.mp3"></audio>
-  <a href=""Askenagn-Abeba Desalegn.mp3""> Download audio </a>
-</figure>
+        <figcaption>Listen to the T-Rex:</figcaption>
+        <audio controls src="Askenagn-Abeba Desalegn.mp3"></audio>
+        <a href="Askenagn-Abeba Desalegn.mp3">Download audio</a>
+    </figure>
+</div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#" id="welcome">Daniboy Entertainment</a>
