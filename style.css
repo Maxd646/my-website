@@ -12,3 +12,11 @@
     margin-left: 20px;
     margin-top: 120px;
 }
+a[href^='mailto']::before {
+  content: '📧 ';
+}
+
+a[href^='tel']::before {
+  content: '📞 ';
+}
+
