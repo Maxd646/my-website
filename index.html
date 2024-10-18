@@ -163,6 +163,17 @@
         <button class="btn btn-primary">Get More</button>
         <button id="active" onclick="alert('Hello. Do you have any questions or comments? Please use the contact section.')">Click Me</button> 
         <hr>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniboy Entertainment</title>
+    <link rel="stylesheet" href="newstyle.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#" id="welcome">Daniboy Entertainment</a>
@@ -175,7 +186,7 @@
                         <a class="nav-link active" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="checkLogin(event, 'galary.html')">Gallery</a>
+                        <a class="nav-link" href="#" onclick="checkLogin(event, 'gallery.html')">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="checkLogin(event, 'info.html')">Information</a>
@@ -231,48 +242,57 @@
             document.getElementById('login-section').style.display = 'block';
         }
 
-        // Check if the user is logged in
+        // Function to restrict access to pages
         function checkLogin(event, targetPage) {
             const loggedIn = sessionStorage.getItem('loggedIn');
 
             if (!loggedIn) {
                 event.preventDefault(); // Prevent link redirection
-                document.getElementById('auth-section').style.display = 'block'; // Show login/signup
+                alert("You must log in to access this section.");
+                document.getElementById('auth-section').style.display = 'block'; // Show login/signup form
             } else {
-                window.location.href = targetPage; // Proceed to the target page
+                window.location.href = targetPage; // If logged in, proceed to the requested page
             }
         }
 
-        // Login form submission
+        // Handle login form submission
         document.getElementById('loginForm').onsubmit = function(event) {
             event.preventDefault(); // Prevent form submission
 
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
 
-            // For demonstration purposes, just save the login state in sessionStorage
+            // Simulating successful login by saving the login state
             if (username && password) {
-                sessionStorage.setItem('loggedIn', true);
-                alert('Logged in successfully!');
+                sessionStorage.setItem('loggedIn', true); // Store logged-in state in session
+                alert('You are now logged in.');
 
-                // Hide the auth section and allow access to pages
+                // Hide the login/signup section
                 document.getElementById('auth-section').style.display = 'none';
             }
         };
 
-        // Signup form submission
+        // Handle signup form submission
         document.getElementById('signupForm').onsubmit = function(event) {
             event.preventDefault(); // Prevent form submission
 
             const newUsername = document.getElementById('newUsername').value;
             const newPassword = document.getElementById('newPassword').value;
 
-            // For demonstration, simulate account creation
+            // Simulating account creation (for now, no server interaction)
             if (newUsername && newPassword) {
                 alert('Account created successfully! Please log in.');
-                toggleLogin(); // Switch to the login form
+                toggleLogin(); // Switch back to the login form after successful signup
             }
         };
     </script>
+</body>
+</html>
+
+    
+                    
+          
+
+       
 </body>
 </html>
