@@ -7,20 +7,40 @@
     <link rel="stylesheet" href="newstyle.css"> <!-- Your custom CSS -->
     <link rel="stylesheet" href="style.css"> <!-- Additional styling -->
     <link rel="stylesheet" href="bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corner Media Placement</title>
     <style>
         .media-container {
             display: flex;
-            flex-direction: row; /* Ensures horizontal alignment */
-            align-items: center; /* Vertically aligns items */
-            gap: 20px; /* Adds space between the items */
+            justify-content: space-between; /* Aligns items to opposite corners */
+            align-items: center; /* Aligns items vertically at the center */
+            width: 100%; /* Makes the container take full width */
+            padding: 0 20px; /* Adds a bit of padding to the sides */
         }
 
         .media-container > * {
-            margin: 10px; /* Adds a small margin to each item */
+            margin: 10px;
         }
     </style>
-</head>
-<body>
+    <head>
+    <body>
+
+<div class="media-container">
+    <!-- Video Embed (Left side) -->
+    <embed type="video/webm" src="flower.mp4" width="250" height="200"/>
+
+    <!-- Audio and download link (Right side) -->
+    <figure>
+        <figcaption>Listen to the T-Rex:</figcaption>
+        <audio controls src="Askenagn - Abeba Desalegn.mp3"></audio>
+        <a href="Askenagn - Abeba Desalegn.mp3">Download audio</a>
+    </figure>
+</div>
+<hr size="4" color="green" noshade>
 <div class="media-container">
     <!-- Video Embed -->
     <embed type="video/webm" src="flower.mp4" width="250" height="200"/>
