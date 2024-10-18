@@ -7,103 +7,117 @@
     <link rel="stylesheet" href="newstyle.css"> <!-- Your custom CSS -->
     <link rel="stylesheet" href="style.css"> <!-- Additional styling -->
     <link rel="stylesheet" href="bootstrap.min.css"> <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="newstyle.css">
 </head>
 <body>
-    <hr size= 4 colour = green  noshade>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#" id="welcome">Daniboy Entertainment</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="galary.html">Gallery</a>
-          </li>
-          <li class="nav-item">
-                <a class="nav-link active" aria-current= "page" href="info.html">Information</a>
-            </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
+    <hr size="4" color="green" noshade>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" id="welcome">Daniboy Entertainment</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" onclick="checkLogin(event, 'galary.html')">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" onclick="checkLogin(event, 'info.html')">Information</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" onclick="checkLogin(event, 'contact.html')">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
 
-<!-- Slider -->
-<div id="carouselExampleCaptions" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="birthday.jfif" class="d-block w-100" alt="Birthday photo">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Birthday photography</h5>
-          <textarea id="comment1" class="form-control" rows="3" placeholder="Leave your comment"></textarea>
-                <button class="btn btn-primary mt-2" onclick="submitComment(1)">Submit</button>
-                <div id="feedback1" class="mt-3"></div>
-        <p></p>
-      </div>
+    <!-- Slider -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="birthday.jfif" class="d-block w-100" alt="Birthday photo">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Birthday photography</h5>
+                    <textarea id="comment1" class="form-control" rows="3" placeholder="Leave your comment"></textarea>
+                    <button class="btn btn-primary mt-2" onclick="submitComment(1)">Submit</button>
+                    <div id="feedback1" class="mt-3"></div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="wedding.jfif" class="d-block w-100" alt="Wedding photo">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Wedding photography</h5>
+                    <textarea id="comment2" class="form-control" rows="3" placeholder="Leave your comment"></textarea>
+                    <button class="btn btn-primary mt-2" onclick="submitComment(2)">Submit</button>
+                    <div id="feedback2" class="mt-3"></div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="graduation.jfif" class="d-block w-100" alt="Graduation photo">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Graduation photography</h5>
+                    <textarea id="comment3" class="form-control" rows="3" placeholder="Leave your comment"></textarea>
+                    <button class="btn btn-primary mt-2" onclick="submitComment(3)">Submit</button>
+                    <div id="feedback3" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <div class="carousel-item" id="wellcome">
-      <img src="wedding.jfif" class="d-block w-100" alt="Wedding photo">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Wedding photography</h5>
-          <textarea id="comment1" class="form-control" rows="3" placeholder="Leave your comment"></textarea>
-                <button class="btn btn-primary mt-2" onclick="submitComment(1)">Submit</button>
-                <div id="feedback1" class="mt-3"></div>
-        <p></p>
-      </div>
+    
+    <!-- Accordion Section -->
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Our Services
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">We provide top-notch event entertainment services including weddings, birthdays, and graduation celebrations.</div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Our Mission
+                </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Our mission is to make your special moments unforgettable with the best entertainment services.</div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    Get in Touch
+                </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Contact us through our form or call us at the number provided on our Contact page to book your event.</div>
+            </div>
+        </div>
     </div>
-    <div class="carousel-item">
-      <img src="graduation.jfif" class="d-block w-100" alt="Graduation photo">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>graduation photography</h5>
-          <textarea id="comment1" class="form-control" rows="3" placeholder="Leave your comment"></textarea>
-                <button class="btn btn-primary mt-2" onclick="submitComment(1)">Submit</button>
-                <div id="feedback1" class="mt-3"></div>
-        <p></p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-    <!-- JavaScript -->
-    <script>
-        function submitComment(photoId) {
-            const commentBox = document.getElementById('comment' + photoId);
-            const feedbackBox = document.getElementById('feedback' + photoId);
-            const comment = commentBox.value;
-            
-            if (comment.trim()) {
-                feedbackBox.innerHTML += `<p><strong>User:</strong> ${comment}</p>`;
-                commentBox.value = ''; // Clear the comment box after submission
-            } else {
-                alert('Please enter a comment before submitting.');
-            }
-        }
-    </script>
-<!-- /Slider -->
     <center>
     <section class="py-5 text-center container">
         <div class="row py-lg-5">
@@ -118,50 +132,7 @@
             </div>
         </div>
     </section>
-<!-- Accordion Section -->
-<div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-        Our Services
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">
-        We provide top-notch event entertainment services including weddings, birthdays, and graduation celebrations.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        Our Mission
-      </button>
-    </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">
-        Our mission is to make your special moments unforgettable with the best entertainment services.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-        Get in Touch
-      </button>
-    </h2>
-    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">
-        Contact us through our form or call us at the number provided on our Contact page to book your event.
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Bootstrap JS and Popper.js -->
-<script src="bootstrap.bundle.js"></script>
-    <br>
-        <button class="btn btn-primary">Get direction</button>
-        <button id="active" onclick="alert('Hello. Do you have any questions or comments? Please use the contact section.')">Click Me</button> 
+
     <!-- Login/Signup Section -->
     <div id="auth-section" style="display:none;">
         <div id="login-section">
@@ -175,7 +146,7 @@
                 <br>
                 <button type="submit">Login</button>
             </form>
-            <p>Don't have an account? <a href="signup.php" onclick="toggleSignup()">Create one</a></p>
+            <p>Don't have an account? <a href="#" onclick="toggleSignup()">Create one</a></p>
         </div>
 
         <div id="signup-section" style="display:none;">
@@ -189,10 +160,11 @@
                 <br>
                 <button type="submit">Sign Up</button>
             </form>
-            <p>Already have an account? <a href="login.php" onclick="toggleLogin()">Login</a></p>
+            <p>Already have an account? <a href="#" onclick="toggleLogin()">Login</a></p>
         </div>
     </div>
 
+    <!-- JavaScript -->
     <script>
         // Toggle between login and signup forms
         function toggleSignup() {
@@ -225,13 +197,11 @@
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
 
-            // Simulating successful login by saving the login state
             if (username && password) {
-                sessionStorage.setItem('loggedIn', true); // Store logged-in state in session
+                sessionStorage.setItem('loggedIn', true); // Simulate login state
                 alert('You are now logged in.');
 
-                // Hide the login/signup section
-                document.getElementById('auth-section').style.display = 'yes';
+                document.getElementById('auth-section').style.display = 'none'; // Hide login/signup section
             }
         };
 
@@ -242,20 +212,25 @@
             const newUsername = document.getElementById('newUsername').value;
             const newPassword = document.getElementById('newPassword').value;
 
-            // Simulating account creation (for now, no server interaction)
             if (newUsername && newPassword) {
                 alert('Account created successfully! Please log in.');
                 toggleLogin(); // Switch back to the login form after successful signup
             }
         };
+
+        // Submit comment functionality
+        function submitComment(slideNumber) {
+            const comment = document.getElementById(`comment${slideNumber}`).value;
+            if (comment) {
+                document.getElementById(`feedback${slideNumber}`).innerHTML = `<p>Thank you for your feedback: ${comment}</p>`;
+                document.getElementById(`comment${slideNumber}`).value = ''; // Clear comment field
+            }
+        }
     </script>
-</body>
-</html>
+        <button class="btn btn-primary">Get direction</button>
+        <button id="active" onclick="alert('Hello. Do you have any questions or comments? Please use the contact section.')">Click Me</button>
 
-    
-                    
-          
-
-       
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="bootstrap.bundle.js"></script>
 </body>
 </html>
