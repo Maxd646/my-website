@@ -117,63 +117,6 @@
             </div>
         </div>
     </section>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Assuming we can detect login status via a session or local storage
-    const loggedIn = sessionStorage.getItem('loggedIn') || false;
-
-    if (!loggedIn) {
-        // Disable gallery and contact links
-        document.querySelector('a[href="galary.html"]').onclick = function(e) {
-            e.preventDefault();
-            alert('Please log in or create an account to view the gallery.');
-        };
-        document.querySelector('a[href="contact.html"]').onclick = function(e) {
-            e.preventDefault();
-            alert('Please log in or create an account to contact us.');
-        };
-    }
-});
-</script>
-<!-- Login Form -->
-<div id="login-section">
-  <h2>Login</h2>
-  <form id="loginForm" method="POST" action="login.php">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
-    <br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
-    <br>
-    <button type="submit">Login</button>
-  </form>
-  <p>Don't have an account? <a href="#" onclick="toggleSignup()">Create one</a></p>
-</div>
-<!-- Signup Form -->
-<div id="signup-section" style="display:none;">
-  <h2>Signup</h2>
-  <form id="signupForm" method="POST" action="signup.php">
-    <label for="newUsername">Username:</label>
-    <input type="text" id="newUsername" name="username" required>
-    <br>
-    <label for="newPassword">Password:</label>
-    <input type="password" id="newPassword" name="password" required>
-    <br>
-    <button type="submit">Sign Up</button>
-  </form>
-  <p>Already have an account? <a href="#" onclick="toggleLogin()">Login</a></p>
-</div>
-    <script>
-function toggleSignup() {
-    document.getElementById('login-section').style.display = 'none';
-    document.getElementById('signup-section').style.display = 'block';
-}
-
-function toggleLogin() {
-    document.getElementById('signup-section').style.display = 'none';
-    document.getElementById('login-section').style.display = 'block';
-}
-</script>
 <!-- Accordion Section -->
 <div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
@@ -216,10 +159,119 @@ function toggleLogin() {
 <!-- Bootstrap JS and Popper.js -->
 <script src="bootstrap.bundle.js"></script>
     <br>
-    <center>
         <button class="btn btn-danger">Get More Information</button>
-        <button id="active" onclick="alert('Hello. Do you have any questions or comments? Please use the contact section.')">Click Me</button>
-    </center> 
-        </hr>
+        <button id="active" onclick="alert('Hello. Do you have any questions or comments? Please use the contact section.')">Click Me</button> 
+        <hr>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" id="welcome">Daniboy Entertainment</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="checkLogin(event, 'galary.html')">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="checkLogin(event, 'info.html')">Information</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="checkLogin(event, 'contact.html')">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login/Signup Section -->
+    <div id="auth-section" style="display:none;">
+        <div id="login-section">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="toggleSignup()">Create one</a></p>
+        </div>
+
+        <div id="signup-section" style="display:none;">
+            <h2>Signup</h2>
+            <form id="signupForm">
+                <label for="newUsername">Username:</label>
+                <input type="text" id="newUsername" name="username" required>
+                <br>
+                <label for="newPassword">Password:</label>
+                <input type="password" id="newPassword" name="password" required>
+                <br>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="toggleLogin()">Login</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Toggle between login and signup forms
+        function toggleSignup() {
+            document.getElementById('login-section').style.display = 'none';
+            document.getElementById('signup-section').style.display = 'block';
+        }
+
+        function toggleLogin() {
+            document.getElementById('signup-section').style.display = 'none';
+            document.getElementById('login-section').style.display = 'block';
+        }
+
+        // Check if the user is logged in
+        function checkLogin(event, targetPage) {
+            const loggedIn = sessionStorage.getItem('loggedIn');
+
+            if (!loggedIn) {
+                event.preventDefault(); // Prevent link redirection
+                document.getElementById('auth-section').style.display = 'block'; // Show login/signup
+            } else {
+                window.location.href = targetPage; // Proceed to the target page
+            }
+        }
+
+        // Login form submission
+        document.getElementById('loginForm').onsubmit = function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // For demonstration purposes, just save the login state in sessionStorage
+            if (username && password) {
+                sessionStorage.setItem('loggedIn', true);
+                alert('Logged in successfully!');
+
+                // Hide the auth section and allow access to pages
+                document.getElementById('auth-section').style.display = 'none';
+            }
+        };
+
+        // Signup form submission
+        document.getElementById('signupForm').onsubmit = function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const newUsername = document.getElementById('newUsername').value;
+            const newPassword = document.getElementById('newPassword').value;
+
+            // For demonstration, simulate account creation
+            if (newUsername && newPassword) {
+                alert('Account created successfully! Please log in.');
+                toggleLogin(); // Switch to the login form
+            }
+        };
+    </script>
 </body>
 </html>
