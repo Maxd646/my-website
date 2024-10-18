@@ -48,6 +48,9 @@
       <img src="birthday.jfif" class="d-block w-100" alt="Birthday photo">
       <div class="carousel-caption d-none d-md-block">
         <h5>Birthday photography</h5>
+          <textarea id="comment1" class="form-control" rows="3" placeholder="Leave your comment"></textarea>
+                <button class="btn btn-primary mt-2" onclick="submitComment(1)">Submit</button>
+                <div id="feedback1" class="mt-3"></div>
         <p></p>
       </div>
     </div>
@@ -55,6 +58,9 @@
       <img src="wedding.jfif" class="d-block w-100" alt="Wedding photo">
       <div class="carousel-caption d-none d-md-block">
         <h5>Wedding photography</h5>
+          <textarea id="comment1" class="form-control" rows="3" placeholder="Leave your comment"></textarea>
+                <button class="btn btn-primary mt-2" onclick="submitComment(1)">Submit</button>
+                <div id="feedback1" class="mt-3"></div>
         <p></p>
       </div>
     </div>
@@ -62,6 +68,9 @@
       <img src="graduation.jfif" class="d-block w-100" alt="Graduation photo">
       <div class="carousel-caption d-none d-md-block">
         <h5>graduation photography</h5>
+          <textarea id="comment1" class="form-control" rows="3" placeholder="Leave your comment"></textarea>
+                <button class="btn btn-primary mt-2" onclick="submitComment(1)">Submit</button>
+                <div id="feedback1" class="mt-3"></div>
         <p></p>
       </div>
     </div>
@@ -75,33 +84,6 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-    <div class="container">
-        <h1 class="text-center">Gallery</h1>
-        <div class="row">
-            <div class="col-md-4">
-                <img src="birthday.jfif" alt="1" class="img-fluid">
-                <h3>Photo 1</h3>
-                <textarea id="comment1" class="form-control" rows="3" placeholder="Leave your comment"></textarea>
-                <button class="btn btn-primary mt-2" onclick="submitComment(1)">Submit</button>
-                <div id="feedback1" class="mt-3"></div>
-            </div>
-            <div class="col-md-4">
-                <img src="wedding.jfif" alt="2" class="img-fluid">
-                <h3>Photo 2</h3>
-                <textarea id="comment2" class="form-control" rows="3" placeholder="Leave your comment"></textarea>
-                <button class="btn btn-primary mt-2" onclick="submitComment(2)">Submit</button>
-                <div id="feedback2" class="mt-3"></div>
-            </div>
-            <div class="col-md-4">
-                <img src="graduation.jfif" alt="3" class="img-fluid">
-                <h3>Photo 3</h3>
-                <textarea id="comment3" class="form-control" rows="3" placeholder="Leave your comment"></textarea>
-                <button class="btn btn-primary mt-2" onclick="submitComment(3)">Submit</button>
-                <div id="feedback3" class="mt-3"></div>
-            </div>
-        </div>
-    </div>
-
     <!-- JavaScript -->
     <script>
         function submitComment(photoId) {
