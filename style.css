@@ -12,14 +12,15 @@
     margin-left: 20px;
     margin-top: 120px;
 }
-a[href^='mailto']::before {
-  content: '📧 ';
+#ddd {
+    color:green;
 }
-
-a[href^='tel']::before {
-  content: '📞 ';
+#dd {
+    color: yellow;
 }
-
+#d {
+    color:red;
+}
 .footer {
     background-color: #222;
     color: #fff;
