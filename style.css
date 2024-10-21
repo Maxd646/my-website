@@ -20,71 +20,47 @@ a[href^='tel']::before {
   content: '📞 ';
 }
 
-/* Footer styles */
 .footer {
-    background-color: #222; /* Dark background color */
-    color: #fff; /* White text color */
-    padding: 20px; /* Padding around the footer */
-    font-family: Arial, sans-serif; /* Font family */
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
 }
 
-.footer-header {
-    display: flex; /* Use Flexbox for horizontal layout */
-    justify-content: space-between; /* Space items evenly */
-    align-items: center; /* Center items vertically */
+.footer-logo {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .footer-logo img {
-    max-height: 50px; /* Limit logo height */
+    max-width: 150px;
 }
 
-.region {
-    flex: 1; /* Allow regions to grow equally */
+.footer-links, .footer-social {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.region h2 {
-    display: none; /* Hide section titles */
+.footer-links ul, .footer-social ul {
+    list-style: none;
+    padding: 0;
 }
 
-.menu {
-    list-style: none; /* Remove default list styling */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
+.footer-links ul li, .footer-social ul li {
+    margin: 5px 0;
 }
 
-.menu__item {
-    margin-bottom: 10px; /* Space between items */
+.footer-links ul li a, .footer-social ul li a {
+    color: #fff;
+    text-decoration: none;
 }
 
-.menu__link {
-    color: #fff; /* White text color for links */
-    text-decoration: none; /* Remove underline */
+.footer-divider {
+    border-top: 1px solid #555;
+    margin: 20px 0;
 }
 
-.menu__link:hover {
-    text-decoration: underline; /* Underline on hover */
+.footer-address, .footer-copyright {
+    text-align: center;
+    font-size: 14px;
 }
-
-.container-subfooter {
-    margin-top: 20px; /* Space above the subfooter */
-    border-top: 1px solid #444; /* Top border for separation */
-    padding-top: 10px; /* Padding above content */
-}
-
-.container-subfooter p,
-.container-subfooter span {
-    font-size: 14px; /* Font size for accessibility statement and copyright */
-    color: #ccc; /* Lighter color for text */
-    margin: 5px 0; /* Margin for spacing */
-}
-
-.container-subfooter a {
-    color: #fff; /* White links in the subfooter */
-    text-decoration: none; /* Remove underline */
-}
-
-.container-subfooter a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
 
