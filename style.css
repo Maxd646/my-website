@@ -67,7 +67,7 @@
 /* Container for the carousel and overlay */
 .carousel-container {
     position: relative;
-    width: 100%;
+    width: 500%;
     height: auto;
 }
 
@@ -84,7 +84,7 @@
 
 /* Style the search form */
 .search-input {
-    padding: 200px;
+    padding: 10px;
     font-size: 1em;
     border-radius: 5px;
     border: none;
