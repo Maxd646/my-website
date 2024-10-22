@@ -9,10 +9,10 @@
     <style>
         .media-container {
             display: flex;
-            justify-content: space-between; /* Aligns items to opposite corners */
-            align-items: center; /* Aligns items vertically at the center */
-            width: 100%; /* Makes the container take full width */
-            padding: 0 20px; /* Adds a bit of padding to the sides */
+            justify-content: space-between; 
+            align-items: center;
+            width: 100%; 
+            padding: 0 20px; 
         }
         .media-container > * {
             margin: 10px;
@@ -31,7 +31,6 @@
   <div class="media-container">
 
     <embed type="video/webm" src="document_5343787383286421492%20(1).mp4" width="120" height="120"/>
-    <!-- Audio and download link (Right side) -->
     <figure>
         <figcaption>Listen to the T-Rex: </figcaption>
         <audio controls src="aexcit-what-we-do.mp3"></audio>
@@ -66,7 +65,6 @@
         </div>
     </div>
   </nav>
-  <!-- Slider -->
   <div id="carouselExampleCaptions" class="carousel slide">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -129,8 +127,6 @@
         </div>
     </div>
   </section>
-  </center>
-    <!-- Accordion Section -->
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
             <h2 class="accordion-header">
@@ -163,7 +159,6 @@
             </div>
         </div>
     </div>
-    <!-- Login/Signup Section -->
     <div id="auth-section" style="display:none;">
         <div id="login-section">
             <h2>Login</h2>
@@ -194,9 +189,7 @@
         </div>
     </div>
 
-    <!-- JavaScript -->
     <script>
-        // Toggle between login and signup forms
         function toggleSignup() {
             document.getElementById('login-section').style.display = 'none';
             document.getElementById('signup-section').style.display = 'block';
@@ -207,7 +200,6 @@
             document.getElementById('login-section').style.display = 'block';
         }
 
-        // Function to restrict access to pages
         function checkLogin(event, targetPage) {
             const loggedIn = sessionStorage.getItem('loggedIn');
 
@@ -220,7 +212,6 @@
             }
         }
 
-        // Handle login form submission
         document.getElementById('loginForm').onsubmit = function(event) {
             event.preventDefault(); // Prevent form submission
 
@@ -228,14 +219,13 @@
             const password = document.getElementById('password').value;
 
             if (username && password) {
-                sessionStorage.setItem('loggedIn', true); // Simulate login state
+                sessionStorage.setItem('loggedIn', true);
                 alert('You are now logged in.');
 
-                document.getElementById('auth-section').style.display = 'none'; // Hide login/signup section
+                document.getElementById('auth-section').style.display = 'none';
             }
         };
 
-        // Handle signup form submission
         document.getElementById('signupForm').onsubmit = function(event) {
             event.preventDefault(); // Prevent form submission
 
@@ -244,24 +234,21 @@
 
             if (newUsername && newPassword) {
                 alert('Account created successfully! Please log in.');
-                toggleLogin(); // Switch back to the login form after successful signup
+                toggleLogin(); 
             }
         };
 
-        // Submit comment functionality
         function submitComment(slideNumber) {
             const comment = document.getElementById(`comment${slideNumber}`).value;
             if (comment) {
                 document.getElementById(`feedback${slideNumber}`).innerHTML = `<p>Thank you for your feedback: ${comment}</p>`;
-                document.getElementById(`comment${slideNumber}`).value = ''; // Clear comment field
+                document.getElementById(`comment${slideNumber}`).value = '';
             }
         }
     </script>   
     <br><br>
-    <button class="btn btn-primary"></button>
         <button id="active" onclick="alert('Hello. Do you have any questions or comments? Please use the contact section.')">Click Me</button>
 
-    <!-- Bootstrap JS and Popper.js -->
     <script src="bootstrap.bundle.js"></script>
 
  <footer id="footer" class="footer">
@@ -274,47 +261,46 @@
             <div class="region region-footer-a">
                 <h2 class="block__title block-title" style=" display: block;" id="ddd">Links</h2>
                 <ul class="menu" style="color:white; list-style: none;padding:0;">
-                    <li class="menu__item"><a href="index.html" title="" class="menu__link" style="color:white;">Home</a></li>
-                    <li class="menu__item"><a href="service.html" title="" class="menu__link" style="color:white;">Services</a></li>
-                    <li class="menu__item"><a href="galary.html" title="" class="menu__link" style="white;">Gallery</a></li>
-                    <li class="menu__item"><a href="bio.html" title="" class="menu__link" style="color:white;">Biography</a></li>
+                <li class="menu__item"><a href="index.html" title="" class="menu__link" style="color:white;">Home</a></li>
+                <li class="menu__item"><a href="service.html" title="" class="menu__link" style="color:white;">Services</a></li>
+                <li class="menu__item"><a href="galary.html" title="" class="menu__link" style="white;">Gallery</a></li>
+                <li class="menu__item"><a href="bio.html" title="" class="menu__link" style="color:white;">Biography</a></li>
                 </ul>
             </div>
             <div class="region region-footer-b">
                 <h2 class="block__title block-title" style="display: block;"id ="dd">Academic</h2>
                 <ul class="menu" style="color:white; list-style: none; padding:0;">
-                    <li class="menu__item"><a href="Soft.html" target="_blank" title="" class="menu__link" style= "color:white;">Software Engineering</a></li>
-                    <li class="menu__item"><a href="wbe.html" target="_blank" title="" class="menu__link" style= "color:white;">Full Stack Web Development</a></li>
-                    <li class="menu__item"><a href="pro.html" target="_blank" title="" class="menu__link" style="color:white;">Programming staff</a></li>
-                    <li class="menu__item"><a href="pro.html" target="_blank" title="" class="menu__link" style="color:white;">research staff</a></li>
+                <li class="menu__item"><a href="Soft.html" target="_blank" title="" class="menu__link" style= "color:white;">Software Engineering</a></li>
+                <li class="menu__item"><a href="wbe.html" target="_blank" title="" class="menu__link" style= "color:white;">Full Stack Web Development</a></li>
+                <li class="menu__item"><a href="pro.html" target="_blank" title="" class="menu__link" style="color:white;">Programming staff</a></li>
+                <li class="menu__item"><a href="pro.html" target="_blank" title="" class="menu__link" style="color:white;">research staff</a></li>
                 </ul>
             </div>
             <div class="region region-footer-c">
                 <h2 class="block__title block-title" style="display: block;" id="d">Social</h2>
                 <ul class="menu">
-                    <ul class="menu" style="color: white; list-style: none; padding:0;">
-                     <li class="menu__item"><a href="telegram.html" class="menu__link" style="color:white;">Telegram</a></li>
-                      <li class="menu__item"><a href="soft.html" class="menu__link" style ="color:white;">twiter</a></li>
-                      <li class="menu__item"><a href="facebook.html" class="menu__link" style="color:white;">Facebook</a></li>
-                       <li class="menu__item"><a href="telegram.html" class="menu__link"style="color:white;">Tiktok</a></li>
+                <ul class="menu" style="color: white; list-style: none; padding:0;">
+                <li class="menu__item"><a href="telegram.html" class="menu__link" style="color:white;">Telegram</a></li>
+                <li class="menu__item"><a href="soft.html" class="menu__link" style ="color:white;">twiter</a></li>
+                <li class="menu__item"><a href="facebook.html" class="menu__link" style="color:white;">Facebook</a></li>
+                <li class="menu__item"><a href="telegram.html" class="menu__link"style="color:white;">Tiktok</a></li>
                 </ul>
             </div>
         </div>
 
-        <!-- Divider Line -->
         <hr style="height: 4px; width: 160%; background-color: white; border: block;">
 
         <!-- Accessibility Statement and Copyright (Vertical) -->
         <div class="container-subfooter">
             <div class="region region-subfooter-a">
-                <div id="block-block-4" class="block block-block accessibility-statement first odd">
-                    <p>If you have a disability and are having trouble accessing information on this website or need materials in an alternate format, contact <a href="mailto:Daniel.gashaw@aastustudent.edu.et">web-accessibility@aastu.edu</a> for assistance.</p>
+                <div="block-block-4" class="block block-block accessibility-statement first odd">
+                    <p>If you have a disability and are having trouble accessing information on this website or need materials in an alternate format, contact <a href="mailto:Daniel.gashaw@aastustudent.edu.et" lass="menu__link" style="color:white;">web-accessibility@aastu.edu</a> for assistance.</p>
                 </div>
             </div>
             <div class="region region-subfooter-b">
                 <div id="block-sitewide-sitewide-copyright-block" class="block block-sitewide first last odd">
                     <center>
-                                          <span class="sitewide-copyright">&copy; 2024 Daniboy Entertainment, All Rights Reserved.</span>
+                        <span class="sitewide-copyright">&copy; 2024 Daniboy Entertainment, All Rights Reserved.</span>
                     </center>
                 </div>
             </div>
