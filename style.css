@@ -71,6 +71,13 @@
     height: auto;
 }
 
+/* Container for the carousel and overlay */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
 /* Center the overlay content vertically and horizontally */
 .overlay-content {
     position: absolute;
@@ -116,7 +123,4 @@
         padding: 8px;
     }
 }
-
-
-
 
