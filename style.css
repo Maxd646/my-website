@@ -67,40 +67,56 @@
 /* Container for the carousel and overlay */
 .carousel-container {
     position: relative;
-    width: 500%;
+    width: 100%;
     height: auto;
 }
 
-/* Style the search form with a wider search input */
+/* Center the overlay content vertically and horizontally */
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* White text to stand out on photos */
+    text-align: center;
+    z-index: 10; /* Make sure it's above the carousel */
+}
+
+/* Style the search form */
 .search-input {
-    width: 500px; /* Increase the width of the search input */
-    font-size: 1em; /* Keep the font size normal */
-    padding: 10px; /* Keep the padding the same */
+    padding: 10px;
+    font-size: 1em;
     border-radius: 5px;
     border: none;
     margin-right: 10px;
 }
 
 .search-btn {
-    padding: 10px 20px; /* Keep the button size normal */
+    padding: 10px 20px;
     font-size: 1em;
     border-radius: 5px;
     border: none;
-    background-color: #ff6600;
+    background-color: #ff6600; /* Customize button color */
     color: white;
     cursor: pointer;
 }
 
 .search-btn:hover {
-    background-color: #ff4500;
+    background-color: #ff4500; /* Hover effect */
 }
 
-/* Responsive adjustment for smaller screens */
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
-    .search-input {
-        width: 100%; /* Full width on smaller screens */
-        font-size: 1em;
+    .overlay-content h1 {
+        font-size: 2em;
+    }
+
+    .search-input, .search-btn {
+        font-size: 0.9em;
+        padding: 8px;
     }
 }
+
+
 
 
