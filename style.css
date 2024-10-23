@@ -309,3 +309,21 @@ nav ul li a:hover {
     }
 }
 
+.media-container {
+    display: flex;           /* Enable horizontal layout */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center;     /* Align items vertically in the center */
+    gap: 20px;               /* Space between items */
+}
+
+.media-container embed, .media-container figure {
+    flex-shrink: 0;          /* Prevent shrinking of elements */
+}
+
+/* For responsive behavior: adjust on smaller screens if needed */
+@media (max-width: 768px) {
+    .media-container {
+        flex-direction: column;
+        align-items: flex-start; 
+    }
+}
