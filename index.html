@@ -39,6 +39,21 @@
                 <li><a href="#">Contact Us</a></li>
                 <li><a href="#">Social</a></li>
             </ul>
+            <!-- Hamburger Menu Icon for mobile -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+    <script>
+        // Function to toggle the hamburger menu visibility
+        function toggleMenu() {
+            const nav = document.querySelector('.nav-links');
+            nav.classList.toggle('nav-active');
+        }
+    </script>
     </header>
   <div class="media-container">
 
