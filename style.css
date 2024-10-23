@@ -168,4 +168,38 @@ nav ul li a:hover {
 .social-media img {
     width: 20px; /* Adjust size as needed */
 }
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Ensure containers and elements don't extend beyond the screen */
+.container, .content {
+    max-width: 100%;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+}
 
