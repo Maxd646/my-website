@@ -10,7 +10,7 @@
     <?php
 session_start();
 if (!isset($_SESSION['logged_in'])) {
-    header("Location: index.html");  // Redirect to login if not authenticated
+    header("Location: index.html"); 
     exit();
 }
 ?>
@@ -23,9 +23,13 @@ if (!isset($_SESSION['logged_in'])) {
 </hr>
 <form name="comment form" method="post">
 <label> your full name:</label><br>
-<input type="text" name ="full name"/> <br>
+<input type="text" name ="full name"> 
+    <input type="color" name ="" valve="">
+     <input type="checkbox" name ="" valve="">
 <label> your email:</label><br>
-<input type="email" name = "email"/><br>
+<input type="email" name = "email">
+     <input type="color" name ="" valve="">
+     <input type="checkbox" name ="" valve="">
 <label> your comment: </label><br>
 <textarea name ="comment" rows="9" column="9">write your comment here </textarea>>
 <input type="submit" value="send your comment"/><br>
