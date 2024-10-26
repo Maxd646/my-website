@@ -127,131 +127,43 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
 }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header and Logo Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 0px;
+}
+
 .header-table {
-    width: 20%; /* Makes the table take full width of the header */
+    width: 20%; /* Adjust width as needed */
 }
 
 .logo {
-    text-align: left; /* Aligns image to the left within the cell */
-    padding-left: 0; /* Removes any extra padding on the left */
-}
-
-.header-logo {
-    display: block; /* Ensures the image doesn't expand to fit cell */
-}
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 0px 0px;
+    padding-left: 0; /* Aligns logo to the left */
 }
 
 .logo img {
     height: 50px; /* Adjust height as needed */
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ffa500; /* Hover color */
-}
-
-.social-media a {
-    margin-left: 10px;
-}
-
-.social-media img {
-    width: 20px; /* Adjust size as needed */
-}
-/* Reset margins and paddings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-}
-
-/* Ensure containers and elements don't extend beyond the screen */
-.container, .content {
-    max-width: 100%;
-}
-
-/* Make images responsive */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Media query for mobile */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-    
-    nav ul {
-        flex-direction: column;
-    }
-}
-/* Reset margins and paddings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 00px 0px;
-}
-
-.logo img {
-    height: 50px; /* Adjust height as needed */
-}
-
-/* Hide hamburger menu by default */
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
-
-.hamburger .bar {
     display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px;
-    background-color: white;
+    margin: 0; /* Removes default centering */
 }
 
+/* Navigation Styling */
 nav ul {
     list-style: none;
     padding: 0;
@@ -273,6 +185,7 @@ nav ul li a:hover {
     color: #ffa500; /* Hover color */
 }
 
+/* Social Media Styling */
 .social-media {
     display: flex;
     gap: 10px;
@@ -282,31 +195,40 @@ nav ul li a:hover {
     width: 20px; /* Adjust size as needed */
 }
 
-/* Mobile adjustments: only apply changes on small screens */
+/* Responsive Layout for Mobile */
 @media (max-width: 768px) {
-    /* Hide the navigation and social media by default */
+    header {
+        flex-direction: column;
+    }
+
     nav ul {
         display: none;
         flex-direction: column;
         width: 100%;
         background-color: #333;
         position: absolute;
-        top: 60px; /* Below the header */
+        top: 60px; /* Position below header */
         left: 0;
         text-align: center;
     }
 
-    /* Show the hamburger icon on mobile */
     .hamburger {
         display: block;
+        cursor: pointer;
     }
 
-    /* When the menu is toggled, show the nav links */
+    .hamburger .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        background-color: white;
+    }
+
     .nav-active {
-        display: flex; /* Display flex when active */
+        display: flex; /* Show nav when active */
     }
 
-    /* Ensure social media icons stack vertically inside the menu */
     .social-media {
         display: none; /* Hidden by default */
         flex-direction: column;
@@ -316,25 +238,29 @@ nav ul li a:hover {
     }
 
     .nav-active + .social-media {
-        display: flex; /* Show when menu is toggled */
+        display: flex; /* Show social media when menu is active */
     }
 }
 
+/* Container and Content Styling */
+.container, .content {
+    max-width: 100%;
+}
+
 .media-container {
-    display: flex;           /* Enable horizontal layout */
-    justify-content: space-between; /* Distribute items evenly */
-    align-items: center;     /* Align items vertically in the center */
-    gap: 20px;               /* Space between items */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
 .media-container embed, .media-container figure {
-    flex-shrink: 0;          /* Prevent shrinking of elements */
+    flex-shrink: 0;
 }
 
-/* For responsive behavior: adjust on smaller screens if needed */
 @media (max-width: 768px) {
     .media-container {
         flex-direction: column;
-        align-items: flex-start; 
+        align-items: flex-start;
     }
 }
