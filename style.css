@@ -128,7 +128,7 @@ body {
     margin: 0;
 }
 .header-table {
-    width: 100%; /* Makes the table take full width of the header */
+    width: 20%; /* Makes the table take full width of the header */
 }
 
 .logo {
@@ -136,7 +136,7 @@ body {
     padding-left: 0; /* Removes any extra padding on the left */
 }
 
-.daniboy entertaiment logo {
+.header-logo {
     display: block; /* Ensures the image doesn't expand to fit cell */
 }
 header {
