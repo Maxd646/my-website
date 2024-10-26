@@ -139,36 +139,38 @@ html, body {
     height: 100%;
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
-
-/* Header and Logo Styling */
+/* Ensure header layout */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #333;
-    padding: 0px;
+    padding: 10px 20px; /* Adjust padding as needed */
 }
 
+/* Align the logo to the left side */
 .header-table {
-    width: 20%; /* Adjust width as needed */
-}
-
-.logo {
-    padding-left: 0; /* Aligns logo to the left */
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
     height: 50px; /* Adjust height as needed */
     display: block;
-    margin: 0; /* Removes default centering */
 }
 
-/* Navigation Styling */
+/* Center the navigation links */
+nav {
+    flex-grow: 1; /* Takes up remaining space for alignment */
+    text-align: center;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    justify-content: center;
 }
 
 nav ul li {
@@ -182,8 +184,9 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffa500; /* Hover color */
+    color: #ffa500;
 }
+
 
 /* Social Media Styling */
 .social-media {
