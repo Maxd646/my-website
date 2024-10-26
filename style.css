@@ -151,7 +151,7 @@ header {
 /* Align the logo to the left side */
 .header-table {
     display: flex;
-    align-items: center;
+    align-items: left;
 }
 
 .logo img {
