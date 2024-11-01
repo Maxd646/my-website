@@ -267,3 +267,6 @@ nav ul li a:hover {
         align-items: flex-start;
     }
 }
+.circular{
+    radius = 120px
+}
