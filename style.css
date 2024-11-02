@@ -270,27 +270,4 @@ nav ul li a:hover {
 .circular{
     radius = 120px
 }
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
 
-#maze-container {
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: auto; /* Allows scrolling if the maze is too large */
-}
-
-#maze {
-    font-family: monospace; /* Monospace for a grid-like appearance */
-    white-space: pre; /* Preserves whitespace */
-    line-height: 1.2; /* Line height for better readability */
-}
