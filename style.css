@@ -1,9 +1,17 @@
-
+body {
+    background-color: #d0f0c0;
+}
+Footer {
+    background-color: #222;
+}
+header {
+    background-color: #AB886D;
+}
 #wellcome {
     color: aqua;
     font-size: 40px;
     margin: auto;
-    background-color: green;
+    background-color: none;
 }
 .mytable{
     color: green;
