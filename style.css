@@ -1,28 +1,9 @@
-<style>
-  .blue_box {
-  border: 10px solid blue;
-  padding: 0.5em;
-  margin: 0.5em;
-  width: 150px;
-  height: 100px;
-  }
-  .red_box {
-  border: 10px solid red;
-  padding: 0.5em;
-  margin: 0.5em;
-  width: 20px;
-  height: 20px;
-  }
-</style>
-
-<div class="blue_box">Hooray, a box!</div>
-<div class="red_box"></div>
 
 #wellcome {
     color: aqua;
     font-size: 40px;
     margin: auto;
-    background-color: none;
+    background-color: green;
 }
 .mytable{
     color: green;
