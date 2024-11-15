@@ -13,6 +13,12 @@ header {
     margin: auto;
     background-color: none;
 }
+#hello {
+    color:blue;
+    font-size: medium;
+    font-style: unset;
+    text-align: center;
+}
 .mytable{
     color: green;
     background-color: white;
