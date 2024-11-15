@@ -14,8 +14,8 @@ header {
     background-color: none;
 }
 #hello {
-    color:blue;
-    font-size: medium;
+    color: green;
+    font-size: small;
     font-style: unset;
     text-align: center;
 }
