@@ -4,13 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Management System Code</title>
+    <!-- Prism.js Syntax Highlighting Styles -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
 </head>
 <body>
     <h1>Library Management System Code</h1>
     <a href="library_management_system.cpp" download>Download Code as .cpp</a>
-    <pre><code class="language-cpp">// Paste your C++ code here
+    <pre><code class="language-cpp">
+    #include <iostream>
+    #include <vector>
+    #include <string>
+    using namespace std;
+
+    // Book Class
+    class Book {
+    public:
+        int id;
+        string title;
+        string author;
+        int copies;
+
+        Book(int bookId, string bookTitle, string bookAuthor, int bookCopies) {
+            id = bookId;
+            title = bookTitle;
+            author = bookAuthor;
+            copies = bookCopies;
+        }
+    };
+
+    // Library Class
+    class Library {
+    public:
+        void addBook() {
+            // Your implementation here
+        }
+
+        void displayBooks() {
+            // Your implementation here
+        }
+    };
+
+    int main() {
+        Library lib;
+        lib.addBook();
+        return 0;
+    }
     </code></pre>
+
+    <!-- Prism.js Syntax Highlighting Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
 </body>
