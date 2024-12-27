@@ -6,50 +6,53 @@
     <title>Library Management System Code</title>
     <!-- Prism.js Syntax Highlighting Styles -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
-     <iframe src="https://www.jdoodle.com/embed/v0/cpp" width="100%" height="500"></iframe>
 </head>
 <body>
     <h1>Library Management System Code</h1>
     <a href="library_management_system.cpp" download>Download Code as .cpp</a>
+    <p>Paste your code here and try it:</p>
+    <a href="https://www.jdoodle.com/c-online-compiler" target="_blank">Try the C++ code here on JDoodle</a>
+    
+    <!-- Displaying the Code -->
     <pre><code class="language-cpp">
-    #include <iostream>
-    #include <vector>
-    #include <string>
-    using namespace std;
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
 
-    // Book Class
-    class Book {
-    public:
-        int id;
-        string title;
-        string author;
-        int copies;
+// Book Class
+class Book {
+public:
+    int id;
+    string title;
+    string author;
+    int copies;
 
-        Book(int bookId, string bookTitle, string bookAuthor, int bookCopies) {
-            id = bookId;
-            title = bookTitle;
-            author = bookAuthor;
-            copies = bookCopies;
-        }
-    };
-
-    // Library Class
-    class Library {
-    public:
-        void addBook() {
-            // Your implementation here
-        }
-
-        void displayBooks() {
-            // Your implementation here
-        }
-    };
-
-    int main() {
-        Library lib;
-        lib.addBook();
-        return 0;
+    Book(int bookId, string bookTitle, string bookAuthor, int bookCopies) {
+        id = bookId;
+        title = bookTitle;
+        author = bookAuthor;
+        copies = bookCopies;
     }
+};
+
+// Library Class
+class Library {
+public:
+    void addBook() {
+        // Your implementation here
+    }
+
+    void displayBooks() {
+        // Your implementation here
+    }
+};
+
+int main() {
+    Library lib;
+    lib.addBook();
+    return 0;
+}
     </code></pre>
 
     <!-- Prism.js Syntax Highlighting Scripts -->
