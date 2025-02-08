@@ -39,6 +39,15 @@
         
     </hader>
     <script>
+    fetch("https://your-backend.onrender.com/api/", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name: "Daniel" })
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error("Error:", error));
+
         // Function to toggle the hamburger menu visibility
         function toggleMenu() {
             const nav = document.querySelector('.nav-links');
