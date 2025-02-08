@@ -38,13 +38,12 @@
         <button onclick="window.print()">Print this page</button>
         
     </hader>
-    <script> 
-    fetch("https://mybackend-sfvp.onrender.com/api/books/",
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error("Error:", error));
-
-    </script>
+   <script>
+    fetch("https://mybackend-sfvp.onrender.com/api/books/")
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error("Error:", error));
+</script>
     </header>
   <div class="media-container">
     <embed type="video/webm" src="document_5343787383286421492%20(1).mp4" width="120" height="120"/>
